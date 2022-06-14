@@ -8,21 +8,16 @@ String startdate=request.getParameter("startdate");
 String enddate=request.getParameter("enddate");
 String discount=request.getParameter("discount");
 
-try
-{
+try{
 	Connection con=ConnectionProvider.getCon();
-	PreparedStatement ps=con.prepareStatement("insert into coupons values(?,?,?,?,?,?)");
-	ps.setString(1, couponid);
-	ps.setString(2, couponname);
-	ps.setString(3, event);
-	ps.setString(4, startdate);
-	ps.setString(5, enddate);
-	ps.setString(6, discount);
-	ps.executeUpdate();
-	response.sendRedirect("coupons.jsp?msg=done");
+	Statement st=con.createStatement();
+	st.executeUpdate("update coupons set couponname = '"+couponname+"', event = '"+event+"',startdate = '"+startdate+"',enddate = '"+enddate+"',discount = '"+discount+"' where couponid = '"+couponid+"'");
+	
+	response.sendRedirect("COUPONE.jsp?msg=done");
 }
 catch(Exception e)
 {
 	System.out.println(e);
-  response.sendRedirect("coupons.jsp?msg=wrong");
-}%>
+	response.sendRedirect("COUPONE.jsp?msg=wrong");
+}
+%>

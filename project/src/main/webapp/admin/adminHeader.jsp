@@ -22,8 +22,8 @@
             <a href="delete.jsp">Delete Products <i class='fas fa-trash' style="font-size:17px;color:red"></i>
             <a href="coupons.jsp">Coupons</a>
             <a href="">Orders Received <i class="fas fa-archive"></i></a>
-            <a href="">Cancel Orders <i class='fas fa-window-close'></i></a>
-            <a href="">Delivered Orders <i class='fas fa-dolly'></i></a>
+            <a href="COUPONE.jsp">Coupon Edit</i></a>
+            <a href="deletecoupon.jsp">Coupon Delete</a>
             <a href="../logout.jsp">Logout <i class='fas fa-share-square' style="color:red"></i></a>
           </div>
            <br>
