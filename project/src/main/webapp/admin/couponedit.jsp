@@ -29,29 +29,24 @@ try
 <form action="couponeditaction.jsp" method="post">
 <input type="hidden" name="couponid" value="<% out.println(couponid);%>">
 <div class="left-div">
- <h3>Enter Coupon Name</h3>
-<input class="input-style" type="text" name="couponname" value="<%=rs.getString(2) %>" required>
+ <h3>Enter Description</h3>
+<input class="input-style" type="text" name="description" value="<%=rs.getString(2) %>" required>
 <hr>
 </div>
 
 <div class="right-div">
-<h3>Enter Event</h3>
- <input class="input-style" type="text" name="event" value="<%=rs.getString(3) %>" required>
+<h3>Enter Event Id</h3>
+ <input class="input-style" type="text" name="eventid" value="<%=rs.getString(3) %>" required>
 <hr>
 </div>
 <div class="leftt-div">
-<h3>Enter startdate</h3>
- <input class="input-style" type="date" name="startdate" value="<%=rs.getString(4) %>" required>
+<h3>Enter Category Id</h3>
+ <input class="input-style" type="text" name="categoryid" value="<%=rs.getString(4) %>" required>
 <hr>
 </div>
-<div class="right-div">
-<h3>Enter End date</h3>
- <input class="input-style" type="date" name="enddate" value="<%=rs.getString(5) %>" required>
-<hr>
-</div>
-<div class="left-div">
+<div class="rightt-div">
 <h3>Enter Discount</h3>
- <input class="input-style" type="number" name="discount" value="<%=rs.getString(6) %>" required>
+ <input class="input-style" type="number" name="discount" value="<%=rs.getString(5) %>" required>
 <hr>
 </div>
  <button class="button">Save<i class='far fa-arrow-alt-circle-right'></i></button>

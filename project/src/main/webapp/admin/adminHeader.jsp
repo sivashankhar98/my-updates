@@ -20,8 +20,10 @@
             <a href="addNewProduct.jsp">Add New Product <i class='fas fa-plus-square'></i></a>
             <a href="allProductEditProduct.jsp">All Products & Edit Products <i class='fab fa-elementor'></i></a>
             <a href="delete.jsp">Delete Products <i class='fas fa-trash' style="font-size:17px;color:red"></i>
-            <a href="coupons.jsp">Coupons</a>
-            <a href="">Orders Received <i class="fas fa-archive"></i></a>
+            <a href="events.jsp">Events</a>
+            <a href="EVENT.jsp">Event Edit</i></a>
+            <a href="deleteevent.jsp">Event Delete</a>
+            <a href="coupon.jsp">Coupons</a>
             <a href="COUPONE.jsp">Coupon Edit</i></a>
             <a href="deletecoupon.jsp">Coupon Delete</a>
             <a href="../logout.jsp">Logout <i class='fas fa-share-square' style="color:red"></i></a>

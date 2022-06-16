@@ -16,13 +16,13 @@ h3
 </style>
 </head>
 <body>
-<div style="color: white; text-align: center; font-size: 30px;">Coupon Edit <i class='fab fa-elementor'></i></div>
+<div style="color: white; text-align: center; font-size: 30px;">Event Edit <i class='fab fa-elementor'></i></div>
 <%
 String msg=request.getParameter("msg");
 if("done".equals(msg))
 {
 %>
-<h3 class="alert">coupon Successfully Updated!</h3>
+<h3 class="alert">Event Successfully Updated!</h3>
 <%} %>
 <% 
 if("wrong".equals(msg))
@@ -33,11 +33,10 @@ if("wrong".equals(msg))
 <table>
         <thead>
           <tr>
-            <th scope="col">Coupon Id</th>
-            <th scope="col">Description</th>
-            <th scope="col">Event ID</th>
-           <th scope="col">Category ID</th>
-            <th scope="col"><i class="fa fa-inr"></i> Discount</th>
+            <th scope="col">ID</th>
+            <th scope="col">Event Name</th>
+           <th scope="col">Start date</th>
+           <th scope="col">End date</th>
             <th scope="col">Edit <i class='fas fa-pen-fancy'></i></th>
           </tr>
         </thead>
@@ -46,7 +45,7 @@ if("wrong".equals(msg))
        try{
     	   Connection con=ConnectionProvider.getCon();
     	   Statement st=con.createStatement();
-    	   ResultSet rs=st.executeQuery("select * from coupons");
+    	   ResultSet rs=st.executeQuery("select * from events");
     	   while(rs.next())
     	   {
        %>
@@ -55,9 +54,8 @@ if("wrong".equals(msg))
             <td><%=rs.getString(2) %></td>
             <td><%=rs.getString(3) %></td>
             <td><%=rs.getString(4) %></td>
-            <td><%=rs.getString(5) %></td>
             
-            <td><a href="couponedit.jsp?couponid=<%=rs.getString(1) %>">Edit <i class='fas fa-pen-fancy'></i></a></td>
+            <td><a href="eventedit.jsp?eventid=<%=rs.getString(1) %>">Edit <i class='fas fa-pen-fancy'></i></a></td>
           </tr>
          <%
          }
